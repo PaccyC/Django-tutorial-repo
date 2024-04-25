@@ -15,4 +15,5 @@ def say_hello(request):
     # Aggregating objects
     result= Customer.objects.annotate(order_count=Count("order"))
     
+    
     return render(request,'hello.html',{'name':'Noel','orders':list(query_set),'result':result},)
