@@ -8,5 +8,6 @@ admin.site.index_title= "ADMIN"
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path("store/",include("store.urls")),
     path("playground/",include('playground.urls'))
 ]
