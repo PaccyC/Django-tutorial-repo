@@ -79,6 +79,7 @@ def collection_detail(request,pk):
     
 
 class CollectionDetail(RetrieveUpdateDestroyAPIView):
+    
     queryset=Collection.objects.all()
     serializer_class=CollectionSerializer
     
