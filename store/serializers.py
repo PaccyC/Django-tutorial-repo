@@ -1,6 +1,6 @@
 from rest_framework import serializers
 from decimal import Decimal
-from store.models import Product,Collection,ProductReview
+from store.models import Cart, Product,Collection,ProductReview
 
 
 class CollectionSerializer(serializers.ModelSerializer):
@@ -42,3 +42,12 @@ class ReviewSerializer(serializers.ModelSerializer):
         product_id=self.context['product_id']
         
         return ProductReview.objects.create(product_id=product_id,**validated_data)
+    
+    
+
+class CartSerializer(serializers.ModelSerializer):
+    class Meta:
+        model=Cart    
+        fields=["id"]
+    
+    id=serializers.IntegerField(read_only=True)
