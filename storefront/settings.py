@@ -42,8 +42,8 @@ INSTALLED_APPS = [
     'playground',
     'store',
     'tags',
-    'store_custom',
     'rest_framework',
+    'core',
 ]
 
 MIDDLEWARE = [
@@ -147,3 +147,5 @@ INTERNAL_IPS = [
     "127.0.0.1",
     # ...
 ]
+
+AUTH_USER_MODEL='core.User'
