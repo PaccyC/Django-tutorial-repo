@@ -6,10 +6,10 @@ from rest_framework.filters import SearchFilter, OrderingFilter
 from rest_framework.viewsets import ModelViewSet, GenericViewSet
 from rest_framework.mixins import CreateModelMixin, RetrieveModelMixin, DestroyModelMixin,UpdateModelMixin
 from rest_framework.decorators import action
-from  rest_framework.permissions import IsAuthenticated,AllowAny,IsAdminUser
+from  rest_framework.permissions import IsAuthenticated,AllowAny,IsAdminUser,DjangoModelPermissions
 from .filters import ProductFilter
 from .models import Collection, Customer, OrderItem, ProductReview, Product, Cart,CartItem
-from .permissions import IsAdminOrReadOnly
+from .permissions import IsAdminOrReadOnly,ViewCustomerHistoryPermission
 from .serializers import ProductSerializer, \
                        CollectionSerializer, \
                        ReviewSerializer, \
@@ -138,6 +138,10 @@ class CustomerViewSet(ModelViewSet):
             return [AllowAny()]
         else:
             return [IsAuthenticated()]
+        
+    @action(detail=True,permission_classes=[ViewCustomerHistoryPermission])   
+    def history(self,request,pk):
+        return Response("OK")    
            
     
     @action(detail=False,methods=["GET","PUT"],permission_classes=[IsAuthenticated])   
