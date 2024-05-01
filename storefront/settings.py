@@ -39,10 +39,11 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
      "debug_toolbar",
     'django_filters',
+    'rest_framework',
+    'djoser',
     'playground',
     'store',
     'tags',
-    'rest_framework',
     'core',
 ]
 
@@ -140,6 +141,10 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 REST_FRAMEWORK={
     "COERCE_DECIMAL_TO_STRING":False,
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework_simplejwt.authentication.JWTAuthentication',
+
+    ),
 }
 
 INTERNAL_IPS = [
@@ -147,5 +152,8 @@ INTERNAL_IPS = [
     "127.0.0.1",
     # ...
 ]
+SIMPLE_JWT = {
+   'AUTH_HEADER_TYPES': ('JWT',),
+}
 
 AUTH_USER_MODEL='core.User'
