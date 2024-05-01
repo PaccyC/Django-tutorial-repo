@@ -5,6 +5,8 @@ from rest_framework import status
 from rest_framework.filters import SearchFilter, OrderingFilter
 from rest_framework.viewsets import ModelViewSet, GenericViewSet
 from rest_framework.mixins import CreateModelMixin, RetrieveModelMixin, DestroyModelMixin,UpdateModelMixin
+from rest_framework.decorators import action
+from  rest_framework.permissions import IsAuthenticated,AllowAny
 from .filters import ProductFilter
 from .models import Collection, Customer, OrderItem, ProductReview, Product, Cart,CartItem
 from .serializers import ProductSerializer, \
@@ -125,4 +127,23 @@ class CartItemViewSet(ModelViewSet):
 class CustomerViewSet(CreateModelMixin,RetrieveModelMixin,UpdateModelMixin,GenericViewSet):
     queryset=Customer.objects.all()
     serializer_class=CustomerSerializer
+    permission_classes=[IsAuthenticated]
+    
+    def get_permissions(self):
+        if self.request.method == "GET":
+            return [AllowAny()]
+        else:
+            return [IsAuthenticated()]
            
+    
+    @action(detail=False,methods=["GET","PUT"])   
+    def me(self,request):
+        (customer,create)= Customer.objects.get_or_create(user_id =request.user.id)
+        if request.method == "GET":
+             serializer= CustomerSerializer(customer)
+             return Response("The user id is",request.user.id)
+        elif  request.method == "PUT":
+            serializer= CustomerSerializer(customer,data=request.data)
+            if serializer.is_valid(raise_exception=True):
+                serializer.save()
+                return Response(serializer.data)
