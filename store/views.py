@@ -8,7 +8,7 @@ from rest_framework.mixins import CreateModelMixin, RetrieveModelMixin, DestroyM
 from rest_framework.decorators import action
 from  rest_framework.permissions import IsAuthenticated,AllowAny,IsAdminUser,DjangoModelPermissions
 from .filters import ProductFilter
-from .models import Collection, Customer, OrderItem, ProductReview, Product, Cart,CartItem
+from .models import Collection, Customer, OrderItem, ProductReview, Product, Cart,CartItem,Order
 from .permissions import IsAdminOrReadOnly,ViewCustomerHistoryPermission
 from .serializers import ProductSerializer, \
                        CollectionSerializer, \
@@ -17,7 +17,8 @@ from .serializers import ProductSerializer, \
                        CartItemSerializer, \
                        AddCartItemSerializer,\
                        UpdateCartItemSerializer,\
-                        CustomerSerializer
+                        CustomerSerializer,\
+                        OrderSerializer
 from store.pagination import DefaultPagination
 from django.db.models import Count
 # Create your views here.
@@ -155,3 +156,8 @@ class CustomerViewSet(ModelViewSet):
             if serializer.is_valid(raise_exception=True):
                 serializer.save()
                 return Response(serializer.data)
+            
+
+class OrderViewSet(ModelViewSet):
+    queryset =Order.objects.all()
+    serializer_class=OrderSerializer
