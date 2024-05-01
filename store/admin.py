@@ -80,6 +80,7 @@ class CustomerAdmin(admin.ModelAdmin):
     list_display=["first_name","last_name","membership_status"]
     list_editable=['membership_status']
     list_per_page=10
+    list_select_related =["user"]
     search_fields=["first_name__istartswith","last_name__istartswith"]
     
  
