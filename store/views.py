@@ -18,7 +18,8 @@ from .serializers import ProductSerializer, \
                        AddCartItemSerializer,\
                        UpdateCartItemSerializer,\
                         CustomerSerializer,\
-                        OrderSerializer
+                        OrderSerializer,\
+                        CreateOrderSerializer
 from store.pagination import DefaultPagination
 from django.db.models import Count
 # Create your views here.
@@ -145,19 +146,39 @@ class CustomerViewSet(ModelViewSet):
         return Response("OK")    
            
     
-    @action(detail=False,methods=["GET","PUT"],permission_classes=[IsAuthenticated])   
-    def me(self,request):
-        (customer,create)= Customer.objects.get_or_create(user_id =request.user.id)
-        if request.method == "GET":
-             serializer= CustomerSerializer(customer)
-             return Response("The user id is",request.user.id)
-        elif  request.method == "PUT":
-            serializer= CustomerSerializer(customer,data=request.data)
-            if serializer.is_valid(raise_exception=True):
-                serializer.save()
-                return Response(serializer.data)
+@action(detail=True, methods=["GET", "PUT"], permission_classes=[IsAuthenticated])
+def me(self, request):
+    customer, created = Customer.objects.get_or_create(user_id=request.user.id)
+    print(request.user.id)
+    
+    if request.method == "GET":
+        serializer = CustomerSerializer(customer)
+        return Response(serializer.data)
+    elif request.method == "PUT":
+        serializer = CustomerSerializer(customer, data=request.data)
+        if serializer.is_valid(raise_exception=True):
+            serializer.save()
+            return Response(serializer.data)
+   
             
 
 class OrderViewSet(ModelViewSet):
     queryset =Order.objects.all()
-    serializer_class=OrderSerializer
+    
+    
+    def get_serializer_class(self):
+        if self.request.method == "GET":
+            return OrderSerializer
+        return CreateOrderSerializer
+    
+    
+    def get_serializer_context(self):
+        return {'user_id':self.request.user.id}
+    
+    def get_queryset(self):
+        user = self.request.user
+        if user.is_staff:
+            return Order.objects.all()
+        
+        (customer_id,created)=Customer.objects.only("id").get_or_create(user_id=user.id)
+        Order.objects.filter(customer_id=customer_id)
