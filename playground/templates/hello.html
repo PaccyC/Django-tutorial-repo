@@ -3,11 +3,5 @@
 {%else%}
 <h1>Hello World</h1>
 {% endif%}
-<h2>Products with inventory less than 10 and price less than 20:</h2>
-<ul>
-    {% for order in orders %}
-        <li>{{ order.id }}-- {{order.customer.first_name}} </li>
-    {% endfor %}
-</ul>
 
 {{result}}
