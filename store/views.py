@@ -8,9 +8,9 @@ from rest_framework.mixins import CreateModelMixin, RetrieveModelMixin, DestroyM
 from rest_framework.decorators import action
 from  rest_framework.permissions import IsAuthenticated,AllowAny,IsAdminUser,DjangoModelPermissions
 from .filters import ProductFilter
-from .models import Collection, Customer, OrderItem, ProductReview, Product, Cart,CartItem,Order
+from .models import Collection, Customer, OrderItem, ProductImage, ProductReview, Product, Cart,CartItem,Order
 from .permissions import IsAdminOrReadOnly,ViewCustomerHistoryPermission
-from .serializers import ProductSerializer, \
+from .serializers import ProductImageSerializer, ProductSerializer, \
                        CollectionSerializer, \
                        ReviewSerializer, \
                        CartSerializer, \
@@ -39,7 +39,7 @@ from django.db.models import Count
 
 
 class ProductViewSet(ModelViewSet):
-    queryset = Product.objects.all()
+    queryset = Product.objects.prefetch_related('images').all()
     serializer_class = ProductSerializer
     filter_backends = [DjangoFilterBackend, SearchFilter, OrderingFilter]
     filterset_class = ProductFilter
@@ -182,3 +182,15 @@ class OrderViewSet(ModelViewSet):
         
         customer_id=Customer.objects.only("id").get(user_id=user.id)
         return Order.objects.filter(customer_id=customer_id)
+
+
+
+class ProductImageViewSet(ModelViewSet):
+    serializer_class = ProductImageSerializer
+    
+    def get_serializer_context(self):
+        return {'product_id':self.kwargs['product_pk']}
+    def get_queryset(self):
+         ProductImage.objects.filter(product_id=self.kwargs['product_pk'])
+       
+    
