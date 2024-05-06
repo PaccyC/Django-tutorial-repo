@@ -2,6 +2,7 @@ from django.core.mail import send_mail,mail_admins,EmailMessage,BadHeaderError
 from rest_framework.response import Response
 from django.shortcuts import render
 from templated_mail.mail import BaseEmailMessage
+from .tasks import notify_customers
 # Create your views here.
 
     
@@ -20,10 +21,12 @@ def say_hello(request):
         # message.send()
         
         # Sending templated mail
-        message=BaseEmailMessage(
-            template_name='emails/hello.html',
-            context={'name':'Paccy'})
-        message.send(['elite@gmail'])
+        
+        # message=BaseEmailMessage(
+        #     template_name='emails/hello.html',
+        #     context={'name':'Paccy'})
+        # message.send(['elite@gmail'])
+        notify_customers.delay('Hello')
         
     except BadHeaderError:
         pass
