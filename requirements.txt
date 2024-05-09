@@ -1,6 +1,6 @@
 pytest
 pytest-django
-django==5.0.1
+django
 django-debug-toolbar
 django-filter
 djangorestframework
