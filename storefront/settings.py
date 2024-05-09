@@ -54,6 +54,7 @@ MIDDLEWARE = [
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
@@ -193,5 +194,35 @@ CELERY_BEAT_SCHEDULE={
         'task':'playground.tasks.notify_customers',
        'schedule':5,
        'args':['Hello World']
+    }
+}
+
+
+LOGGING={
+    'version':1,
+    'disable_existing_loggers':False,
+    'handlers':{
+        'console':{
+            'class':'logging.StreamHandler',
+        },
+        'file':{
+            'class':'logging.FileHandler',
+            'filename':'general.log',
+        },
+    },
+    'loggers':{
+        '':{
+         'handlers':['console','file'],
+         'level':os.environ.get('DJANGO_LOG_LEVEL','INFO'),
+         'propagate':True,
+        },
+        'django':{
+        }
+    },
+    'formatters':{
+        'verbode':{
+            'format':'{asctime} ({levelname}) - {name} -{message}',
+            'style':'{'
+        }
     }
 }
