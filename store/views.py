@@ -78,7 +78,7 @@ class CollectionViewSet(ModelViewSet):
         products_count=Count('products')
     )
     serializer_class = CollectionSerializer
-    permission_classes=[IsAdminOrReadOnly]
+    permission_classes=[IsAuthenticated]
 
     def destroy(self, request, *args, **kwargs):
         if Product.objects.filter(collection_id=kwargs["pk"]).count() > 0:

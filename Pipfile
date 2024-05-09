@@ -13,8 +13,11 @@ django-filter = "*"
 django-debug-toolbar = "*"
 djoser = "*"
 djangorestframework-simplejwt = "*"
+pytest = "*"
+pytest-django = "*"
 
 [dev-packages]
+pytest = "*"
 
 [requires]
 python_version = "3.11"
