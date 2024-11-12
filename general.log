@@ -1,0 +1,323 @@
+Watching for file changes with StatReloader
+/home/paccy/Desktop/codes/python-codes/Django-tutorial-repo/storefront/settings/dev.py changed, reloading.
+Watching for file changes with StatReloader
+/home/paccy/Desktop/codes/python-codes/Django-tutorial-repo/storefront/settings/dev.py changed, reloading.
+Watching for file changes with StatReloader
+/home/paccy/Desktop/codes/python-codes/Django-tutorial-repo/storefront/settings/dev.py changed, reloading.
+Watching for file changes with StatReloader
+/home/paccy/Desktop/codes/python-codes/Django-tutorial-repo/store/urls.py changed, reloading.
+Watching for file changes with StatReloader
+/home/paccy/Desktop/codes/python-codes/Django-tutorial-repo/store/urls.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+/home/paccy/Desktop/codes/python-codes/Django-tutorial-repo/store/urls.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 13889
+"GET /static/core/styles.css HTTP/1.1" 200 265
+"GET /static/core/logo.svg HTTP/1.1" 200 14029
+"GET /static/debug_toolbar/css/toolbar.css HTTP/1.1" 200 16675
+"GET /static/debug_toolbar/js/toolbar.js HTTP/1.1" 200 14601
+"GET /static/debug_toolbar/css/print.css HTTP/1.1" 200 43
+"GET /static/debug_toolbar/js/utils.js HTTP/1.1" 200 4742
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 16873
+"GET /admin HTTP/1.1" 301 0
+"GET /admin/ HTTP/1.1" 302 0
+"GET /admin/login/?next=/admin/ HTTP/1.1" 200 17703
+"GET /static/admin/js/theme.js HTTP/1.1" 200 1653
+"GET /static/admin/css/dark_mode.css HTTP/1.1" 200 2804
+"GET /static/admin/css/nav_sidebar.css HTTP/1.1" 200 2810
+"GET /static/admin/css/base.css HTTP/1.1" 200 22092
+"GET /static/admin/css/login.css HTTP/1.1" 200 951
+"GET /static/admin/css/responsive.css HTTP/1.1" 200 17972
+"GET /static/admin/js/nav_sidebar.js HTTP/1.1" 200 3063
+"POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+"GET /admin/ HTTP/1.1" 200 22942
+"GET /static/admin/css/dashboard.css HTTP/1.1" 200 441
+"GET /static/admin/img/icon-addlink.svg HTTP/1.1" 200 331
+"GET /static/admin/img/icon-changelink.svg HTTP/1.1" 200 380
+"GET /admin/auth/group/ HTTP/1.1" 200 23786
+"GET /static/admin/css/changelists.css HTTP/1.1" 200 6878
+"GET /static/admin/js/jquery.init.js HTTP/1.1" 200 347
+"GET /static/admin/js/core.js HTTP/1.1" 200 6208
+"GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 200 9097
+"GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 200 285314
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /static/admin/js/actions.js HTTP/1.1" 200 8076
+"GET /static/admin/js/prepopulate.js HTTP/1.1" 200 1531
+"GET /static/admin/js/urlify.js HTTP/1.1" 200 7887
+"GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 200 325171
+"GET /static/admin/img/search.svg HTTP/1.1" 200 458
+"GET /static/admin/js/filters.js HTTP/1.1" 200 978
+"GET /static/admin/img/tooltag-add.svg HTTP/1.1" 200 331
+"GET /__debug__/render_panel/?store_id=3af61cf03fd64d9ca114ae94e7e0fe69&panel_id=SQLPanel HTTP/1.1" 200 68928
+Internal Server Error: /admin/store/collection/
+Traceback (most recent call last):
+  File "/home/paccy/Desktop/codes/python-codes/Django-tutorial-repo/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/paccy/Desktop/codes/python-codes/Django-tutorial-repo/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/paccy/Desktop/codes/python-codes/Django-tutorial-repo/venv/lib/python3.10/site-packages/django/contrib/admin/options.py", line 718, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/paccy/Desktop/codes/python-codes/Django-tutorial-repo/venv/lib/python3.10/site-packages/django/utils/decorators.py", line 188, in _view_wrapper
+    result = _process_exception(request, e)
+  File "/home/paccy/Desktop/codes/python-codes/Django-tutorial-repo/venv/lib/python3.10/site-packages/django/utils/decorators.py", line 186, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/home/paccy/Desktop/codes/python-codes/Django-tutorial-repo/venv/lib/python3.10/site-packages/django/views/decorators/cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/home/paccy/Desktop/codes/python-codes/Django-tutorial-repo/venv/lib/python3.10/site-packages/django/contrib/admin/sites.py", line 241, in inner
+    return view(request, *args, **kwargs)
+  File "/home/paccy/Desktop/codes/python-codes/Django-tutorial-repo/venv/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/paccy/Desktop/codes/python-codes/Django-tutorial-repo/venv/lib/python3.10/site-packages/django/utils/decorators.py", line 188, in _view_wrapper
+    result = _process_exception(request, e)
+  File "/home/paccy/Desktop/codes/python-codes/Django-tutorial-repo/venv/lib/python3.10/site-packages/django/utils/decorators.py", line 186, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/home/paccy/Desktop/codes/python-codes/Django-tutorial-repo/venv/lib/python3.10/site-packages/django/contrib/admin/options.py", line 2001, in changelist_view
+    cl = self.get_changelist_instance(request)
+  File "/home/paccy/Desktop/codes/python-codes/Django-tutorial-repo/venv/lib/python3.10/site-packages/django/contrib/admin/options.py", line 866, in get_changelist_instance
+    return ChangeList(
+  File "/home/paccy/Desktop/codes/python-codes/Django-tutorial-repo/venv/lib/python3.10/site-packages/django/contrib/admin/views/main.py", line 91, in __init__
+    self.root_queryset = model_admin.get_queryset(request)
+  File "/home/paccy/Desktop/codes/python-codes/Django-tutorial-repo/store/admin.py", line 74, in get_queryset
+    return super().get_queryset(request).annotate(
+  File "/home/paccy/Desktop/codes/python-codes/Django-tutorial-repo/venv/lib/python3.10/site-packages/django/db/models/query.py", line 1630, in annotate
+    return self._annotate(args, kwargs, select=True)
+  File "/home/paccy/Desktop/codes/python-codes/Django-tutorial-repo/venv/lib/python3.10/site-packages/django/db/models/query.py", line 1680, in _annotate
+    clone.query.add_annotation(
+  File "/home/paccy/Desktop/codes/python-codes/Django-tutorial-repo/venv/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1194, in add_annotation
+    annotation = annotation.resolve_expression(self, allow_joins=True, reuse=None)
+  File "/home/paccy/Desktop/codes/python-codes/Django-tutorial-repo/venv/lib/python3.10/site-packages/django/db/models/aggregates.py", line 63, in resolve_expression
+    c = super().resolve_expression(query, allow_joins, reuse, summarize)
+  File "/home/paccy/Desktop/codes/python-codes/Django-tutorial-repo/venv/lib/python3.10/site-packages/django/db/models/expressions.py", line 1073, in resolve_expression
+    c.source_expressions[pos] = arg.resolve_expression(
+  File "/home/paccy/Desktop/codes/python-codes/Django-tutorial-repo/venv/lib/python3.10/site-packages/django/db/models/expressions.py", line 895, in resolve_expression
+    return query.resolve_ref(self.name, allow_joins, reuse, summarize)
+  File "/home/paccy/Desktop/codes/python-codes/Django-tutorial-repo/venv/lib/python3.10/site-packages/django/db/models/sql/query.py", line 2010, in resolve_ref
+    join_info = self.setup_joins(
+  File "/home/paccy/Desktop/codes/python-codes/Django-tutorial-repo/venv/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1863, in setup_joins
+    path, final_field, targets, rest = self.names_to_path(
+  File "/home/paccy/Desktop/codes/python-codes/Django-tutorial-repo/venv/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1768, in names_to_path
+    raise FieldError(
+django.core.exceptions.FieldError: Cannot resolve keyword 'product' into field. Choices are: featured_product, featured_product_id, id, products, title
+"GET /admin/store/collection/ HTTP/1.1" 500 188603
+"GET /admin/auth/group/ HTTP/1.1" 200 23786
+"GET /admin/store/customer/ HTTP/1.1" 200 26850
+"GET /static/admin/css/forms.css HTTP/1.1" 200 8794
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /static/admin/css/widgets.css HTTP/1.1" 200 11564
+"GET /static/admin/img/sorting-icons.svg HTTP/1.1" 200 1097
+"GET /admin/store/order/ HTTP/1.1" 200 23438
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/store/product/ HTTP/1.1" 200 25631
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /static/admin/img/icon-viewlink.svg HTTP/1.1" 200 581
+"GET /admin/tags/tag/ HTTP/1.1" 200 23743
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /auth HTTP/1.1" 301 0
+"GET /auth/ HTTP/1.1" 200 18808
+"GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 200 121457
+"GET /static/rest_framework/js/csrf.js HTTP/1.1" 200 1793
+"GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 200 3796
+"GET /static/rest_framework/css/prettify.css HTTP/1.1" 200 817
+"GET /static/rest_framework/css/default.css HTTP/1.1" 200 1152
+"GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 200 3426
+"GET /static/rest_framework/js/jquery-3.7.1.min.js HTTP/1.1" 200 87533
+"GET /static/rest_framework/js/default.js HTTP/1.1" 200 1268
+"GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 200 13632
+"GET /static/rest_framework/js/load-ajax-form.js HTTP/1.1" 200 59
+"GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 200 39680
+"GET /static/rest_framework/img/grid.png HTTP/1.1" 200 1458
+Not Found: /auth/login
+"GET /auth/login HTTP/1.1" 404 24557
+Unauthorized: /auth/users/
+"GET /auth/users/ HTTP/1.1" 401 23433
+Unauthorized: /auth/users/
+"GET /auth/users/ HTTP/1.1" 401 23433
+Not Found: /auth/login
+"GET /auth/login HTTP/1.1" 404 24557
+Method Not Allowed: /auth/jwt/create
+"GET /auth/jwt/create HTTP/1.1" 405 21306
+"POST /auth/jwt/create HTTP/1.1" 200 21750
+Method Not Allowed: /auth/jwt/create
+"GET /auth/jwt/create HTTP/1.1" 405 21306
+"GET /auth/users HTTP/1.1" 301 0
+Unauthorized: /auth/users/
+"GET /auth/users/ HTTP/1.1" 401 23433
+Unauthorized: /auth/users/
+"GET /auth/users/ HTTP/1.1" 401 23433
+Unauthorized: /auth/users/
+"GET /auth/users/ HTTP/1.1" 401 23433
+"GET /admin HTTP/1.1" 301 0
+"GET /admin/ HTTP/1.1" 302 0
+"GET /admin/login/?next=/admin/ HTTP/1.1" 200 17703
+"GET /static/admin/css/base.css HTTP/1.1" 200 22092
+"GET /static/admin/js/theme.js HTTP/1.1" 200 1653
+"GET /static/admin/css/nav_sidebar.css HTTP/1.1" 200 2810
+"GET /static/admin/css/responsive.css HTTP/1.1" 200 17972
+"GET /static/admin/css/dark_mode.css HTTP/1.1" 200 2804
+"GET /static/debug_toolbar/css/toolbar.css HTTP/1.1" 200 16675
+"GET /static/admin/css/login.css HTTP/1.1" 200 951
+"GET /static/debug_toolbar/js/toolbar.js HTTP/1.1" 200 14601
+"GET /static/admin/js/nav_sidebar.js HTTP/1.1" 200 3063
+"GET /static/debug_toolbar/css/print.css HTTP/1.1" 200 43
+"GET /static/debug_toolbar/js/utils.js HTTP/1.1" 200 4742
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 16873
+"POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+"GET /admin/ HTTP/1.1" 200 22941
+"GET /static/admin/css/dashboard.css HTTP/1.1" 200 441
+"GET /static/admin/img/icon-addlink.svg HTTP/1.1" 200 331
+"GET /static/admin/img/icon-changelink.svg HTTP/1.1" 200 380
+"GET /auth HTTP/1.1" 301 0
+"GET /auth/ HTTP/1.1" 200 18808
+"GET /static/rest_framework/css/prettify.css HTTP/1.1" 200 817
+"GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 200 3796
+"GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 200 3426
+"GET /static/rest_framework/css/default.css HTTP/1.1" 200 1152
+"GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 200 121457
+"GET /static/rest_framework/js/jquery-3.7.1.min.js HTTP/1.1" 200 87533
+"GET /static/rest_framework/js/load-ajax-form.js HTTP/1.1" 200 59
+"GET /static/rest_framework/js/default.js HTTP/1.1" 200 1268
+"GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 200 39680
+"GET /static/rest_framework/js/csrf.js HTTP/1.1" 200 1793
+"GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 200 13632
+"GET /static/rest_framework/img/grid.png HTTP/1.1" 200 1458
+Method Not Allowed: /auth/jwt/create
+"GET /auth/jwt/create HTTP/1.1" 405 21306
+"POST /auth/jwt/create HTTP/1.1" 200 21750
+Not Found: /auth/login
+"GET /auth/login HTTP/1.1" 404 24557
+"GET /__debug__/render_panel/?store_id=30c769bf6e434762904905c522b1cd60&panel_id=HeadersPanel HTTP/1.1" 200 3776
+"GET /__debug__/render_panel/?store_id=30c769bf6e434762904905c522b1cd60&panel_id=RequestPanel HTTP/1.1" 200 2026
+"GET /__debug__/render_panel/?store_id=30c769bf6e434762904905c522b1cd60&panel_id=SQLPanel HTTP/1.1" 200 115
+Watching for file changes with StatReloader
+"GET /admin HTTP/1.1" 301 0
+"GET /admin/ HTTP/1.1" 200 22943
+"GET /admin/auth/group/ HTTP/1.1" 200 23786
+"GET /static/admin/css/changelists.css HTTP/1.1" 200 6878
+"GET /static/admin/js/actions.js HTTP/1.1" 200 8076
+"GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 200 9097
+"GET /static/admin/js/core.js HTTP/1.1" 200 6208
+"GET /static/admin/js/jquery.init.js HTTP/1.1" 200 347
+"GET /static/admin/js/urlify.js HTTP/1.1" 200 7887
+"GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 200 285314
+"GET /static/admin/js/prepopulate.js HTTP/1.1" 200 1531
+"GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 200 325171
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /static/admin/img/search.svg HTTP/1.1" 200 458
+"GET /static/admin/js/filters.js HTTP/1.1" 200 978
+"GET /static/admin/img/tooltag-add.svg HTTP/1.1" 200 331
+"GET /admin/auth/group/add/ HTTP/1.1" 200 31350
+"GET /static/admin/css/forms.css HTTP/1.1" 200 8794
+"GET /static/admin/js/SelectBox.js HTTP/1.1" 200 4530
+"GET /static/admin/js/prepopulate_init.js HTTP/1.1" 200 586
+"GET /static/admin/js/SelectFilter2.js HTTP/1.1" 200 15502
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /static/admin/css/widgets.css HTTP/1.1" 200 11564
+"GET /static/admin/js/change_form.js HTTP/1.1" 200 606
+"GET /static/admin/img/icon-unknown.svg HTTP/1.1" 200 655
+"GET /static/admin/img/selector-icons.svg HTTP/1.1" 200 3291
+"GET /static/admin/img/icon-unknown-alt.svg HTTP/1.1" 200 655
+Internal Server Error: /admin/store/collection/
+Traceback (most recent call last):
+  File "/home/paccy/Desktop/codes/python-codes/Django-tutorial-repo/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/paccy/Desktop/codes/python-codes/Django-tutorial-repo/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/paccy/Desktop/codes/python-codes/Django-tutorial-repo/venv/lib/python3.10/site-packages/django/contrib/admin/options.py", line 718, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/paccy/Desktop/codes/python-codes/Django-tutorial-repo/venv/lib/python3.10/site-packages/django/utils/decorators.py", line 188, in _view_wrapper
+    result = _process_exception(request, e)
+  File "/home/paccy/Desktop/codes/python-codes/Django-tutorial-repo/venv/lib/python3.10/site-packages/django/utils/decorators.py", line 186, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/home/paccy/Desktop/codes/python-codes/Django-tutorial-repo/venv/lib/python3.10/site-packages/django/views/decorators/cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/home/paccy/Desktop/codes/python-codes/Django-tutorial-repo/venv/lib/python3.10/site-packages/django/contrib/admin/sites.py", line 241, in inner
+    return view(request, *args, **kwargs)
+  File "/home/paccy/Desktop/codes/python-codes/Django-tutorial-repo/venv/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/paccy/Desktop/codes/python-codes/Django-tutorial-repo/venv/lib/python3.10/site-packages/django/utils/decorators.py", line 188, in _view_wrapper
+    result = _process_exception(request, e)
+  File "/home/paccy/Desktop/codes/python-codes/Django-tutorial-repo/venv/lib/python3.10/site-packages/django/utils/decorators.py", line 186, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/home/paccy/Desktop/codes/python-codes/Django-tutorial-repo/venv/lib/python3.10/site-packages/django/contrib/admin/options.py", line 2001, in changelist_view
+    cl = self.get_changelist_instance(request)
+  File "/home/paccy/Desktop/codes/python-codes/Django-tutorial-repo/venv/lib/python3.10/site-packages/django/contrib/admin/options.py", line 866, in get_changelist_instance
+    return ChangeList(
+  File "/home/paccy/Desktop/codes/python-codes/Django-tutorial-repo/venv/lib/python3.10/site-packages/django/contrib/admin/views/main.py", line 91, in __init__
+    self.root_queryset = model_admin.get_queryset(request)
+  File "/home/paccy/Desktop/codes/python-codes/Django-tutorial-repo/store/admin.py", line 74, in get_queryset
+    return super().get_queryset(request).annotate(
+  File "/home/paccy/Desktop/codes/python-codes/Django-tutorial-repo/venv/lib/python3.10/site-packages/django/db/models/query.py", line 1630, in annotate
+    return self._annotate(args, kwargs, select=True)
+  File "/home/paccy/Desktop/codes/python-codes/Django-tutorial-repo/venv/lib/python3.10/site-packages/django/db/models/query.py", line 1680, in _annotate
+    clone.query.add_annotation(
+  File "/home/paccy/Desktop/codes/python-codes/Django-tutorial-repo/venv/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1194, in add_annotation
+    annotation = annotation.resolve_expression(self, allow_joins=True, reuse=None)
+  File "/home/paccy/Desktop/codes/python-codes/Django-tutorial-repo/venv/lib/python3.10/site-packages/django/db/models/aggregates.py", line 63, in resolve_expression
+    c = super().resolve_expression(query, allow_joins, reuse, summarize)
+  File "/home/paccy/Desktop/codes/python-codes/Django-tutorial-repo/venv/lib/python3.10/site-packages/django/db/models/expressions.py", line 1073, in resolve_expression
+    c.source_expressions[pos] = arg.resolve_expression(
+  File "/home/paccy/Desktop/codes/python-codes/Django-tutorial-repo/venv/lib/python3.10/site-packages/django/db/models/expressions.py", line 895, in resolve_expression
+    return query.resolve_ref(self.name, allow_joins, reuse, summarize)
+  File "/home/paccy/Desktop/codes/python-codes/Django-tutorial-repo/venv/lib/python3.10/site-packages/django/db/models/sql/query.py", line 2010, in resolve_ref
+    join_info = self.setup_joins(
+  File "/home/paccy/Desktop/codes/python-codes/Django-tutorial-repo/venv/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1863, in setup_joins
+    path, final_field, targets, rest = self.names_to_path(
+  File "/home/paccy/Desktop/codes/python-codes/Django-tutorial-repo/venv/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1768, in names_to_path
+    raise FieldError(
+django.core.exceptions.FieldError: Cannot resolve keyword 'product' into field. Choices are: featured_product, featured_product_id, id, products, title
+"GET /admin/store/collection/ HTTP/1.1" 500 188459
+"GET /admin/auth/group/add/ HTTP/1.1" 200 31350
+"GET /admin/store/customer/ HTTP/1.1" 200 26850
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /static/admin/img/sorting-icons.svg HTTP/1.1" 200 1097
+"GET /admin/store/customer/add/ HTTP/1.1" 200 27542
+"GET /static/admin/js/calendar.js HTTP/1.1" 200 9141
+"GET /static/admin/js/admin/DateTimeShortcuts.js HTTP/1.1" 200 19319
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /static/admin/img/icon-viewlink.svg HTTP/1.1" 200 581
+"GET /static/admin/img/icon-calendar.svg HTTP/1.1" 200 1086
+"GET /static/admin/img/icon-clock.svg HTTP/1.1" 200 677
+"POST /admin/store/customer/add/ HTTP/1.1" 200 27776
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/core/user/add/?_to_field=id&_popup=1 HTTP/1.1" 200 22321
+"GET /static/admin/css/unusable_password_field.css HTTP/1.1" 200 663
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /static/admin/js/unusable_password_field.js HTTP/1.1" 200 1480
+"POST /admin/core/user/add/?_to_field=id&_popup=1 HTTP/1.1" 200 13904
+"GET /static/admin/js/popup_response.js HTTP/1.1" 200 532
+"POST /admin/store/customer/add/ HTTP/1.1" 200 27811
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/core/user/2/change/?_to_field=id&_popup=1 HTTP/1.1" 200 34959
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/store/customer/ HTTP/1.1" 200 27448
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/store/customer/?o=-1.2 HTTP/1.1" 200 27595
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/store/customer/ HTTP/1.1" 200 27448
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/store/order/ HTTP/1.1" 200 23438
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/store/order/add/ HTTP/1.1" 200 39354
+"GET /static/admin/css/vendor/select2/select2.css HTTP/1.1" 200 17358
+"GET /static/admin/js/inlines.js HTTP/1.1" 200 15526
+"GET /static/admin/css/autocomplete.css HTTP/1.1" 200 9185
+"GET /static/admin/js/vendor/select2/i18n/en.js HTTP/1.1" 200 844
+"GET /static/admin/js/vendor/select2/select2.full.js HTTP/1.1" 200 173566
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /static/admin/js/autocomplete.js HTTP/1.1" 200 1060
+"GET /static/admin/img/icon-deletelink.svg HTTP/1.1" 200 392
+"GET /static/admin/img/inline-delete.svg HTTP/1.1" 200 560
+"GET /admin/autocomplete/?app_label=store&model_name=orderitem&field_name=product HTTP/1.1" 200 46
+"GET /__debug__/history_sidebar/?store_id=df6c04c554a84a76832d8fa5e6f88c5a HTTP/1.1" 200 10283
+"GET /admin/core/user/ HTTP/1.1" 200 27780
+"GET /static/admin/img/icon-yes.svg HTTP/1.1" 200 436
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /static/admin/img/icon-no.svg HTTP/1.1" 200 560

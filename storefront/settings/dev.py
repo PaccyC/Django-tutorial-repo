@@ -15,8 +15,8 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'storefront',
         'HOST': 'localhost',
-        'USER': 'root',
-        'PASSWORD': '',
+        'USER': 'test',
+        'PASSWORD': 'Paccy@123456789',
         'PORT': '3306',
         'OPTIONS': {
             'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
